@@ -22,7 +22,7 @@
     },
     "minimum-stability": "stable",
     "scripts": {
-        "post-install-cmd": [
+        "post-package-install": [
             "IgI\\SypexGeo\\Composer::installDatabases"
         ]
     },
