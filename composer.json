@@ -20,14 +20,5 @@
             "Sorbing\\SypexGeoLaravel": "src/"
         }
     },
-    "minimum-stability": "stable",
-    "scripts": {
-        "post-package-install": [
-            "IgI\\SypexGeo\\Composer::installDatabases"
-        ]
-    },
-    "extra": {
-        "sypexgeo_remote": "https://sypexgeo.net/files/SxGeoCity_utf8.zip",
-        "sypexgeo_local": "etc/SxGeoCity.dat"
-    }
+    "minimum-stability": "dev"
 }
