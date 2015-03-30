@@ -1,0 +1,33 @@
+{
+    "name": "sorbing/sypex-geo-laravel",
+    "description": "The Sypex Geo PHP Class Wrapper for Laravel 4.2",
+    "keywords": ["laravel", "sypex", "geo", "ip", "city"],
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stanislav Butsenko",
+            "email": "svbutsenko@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "igi/sypexgeo": "dev-master",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sorbing\\SypexGeoLaravel": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "post-install-cmd": [
+            "IgI\\SypexGeo\\Composer::installDatabases"
+        ]
+    },
+    "extra": {
+        "sypexgeo_remote": "https://sypexgeo.net/files/SxGeoCity_utf8.zip",
+        "sypexgeo_local": "etc/SxGeoCity.dat"
+    }
+}
