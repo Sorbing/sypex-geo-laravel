@@ -20,6 +20,18 @@ Register the Service Provider in `providers` array in `app/config/app.php`:
 
     'Sorbing\SypexGeoLaravel\SypexGeoLaravelServiceProvider',
 
+Use the following config in `composer.json` for install `SxGeoCity.dat` database:
+
+    "scripts": {
+        "post-update-cmd": [
+            "IgI\\SypexGeo\\Composer::installDatabases"
+        ]
+    },
+    "extra": {
+        "sypexgeo_remote": "https://sypexgeo.net/files/SxGeoCity_utf8.zip",
+        "sypexgeo_local": "app/database/SxGeoCity.dat"
+    }
+
 ### Usage
 
 Usage the `sypexgeo` service from IoC:
