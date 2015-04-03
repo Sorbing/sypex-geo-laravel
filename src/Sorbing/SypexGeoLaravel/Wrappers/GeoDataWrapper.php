@@ -12,10 +12,13 @@ namespace Sorbing\SypexGeoLaravel\Wrappers;
  */
 class GeoDataWrapper extends BaseWrapper
 {
+    /**
+     * @param array $data ['city' => array, 'region' => array, 'country' => array]
+     */
     public function __construct(array $data)
     {
-        $this->city = new CityWrapper($data['city']);
-        $this->region = new RegionWrapper($data['region']);
-        $this->country = new CountryWrapper($data['country']);
+        $this->city = new CityWrapper(isset($data['city']) ? $data['city'] : []);
+        $this->region = new RegionWrapper(isset($data['region']) ? $data['region'] : []);
+        $this->country = new CountryWrapper(isset($data['country']) ? $data['country'] : []);
     }
 }

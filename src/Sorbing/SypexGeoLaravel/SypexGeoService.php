@@ -18,7 +18,13 @@ class SypexGeoService
 
 	public static function get($ip)
 	{
-		$geoData = new Wrappers\GeoDataWrapper(static::$sxGeo->getCityFull($ip));
+		$data = static::$sxGeo->getCityFull($ip);
+
+		if (!$data || !is_array($data)) {
+			return false;
+		}
+
+		$geoData = new Wrappers\GeoDataWrapper($data);
 
 		return $geoData;
 	}
